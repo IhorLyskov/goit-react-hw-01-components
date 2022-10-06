@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FriendListItem = ({ friend }) => {
   const { avatar, name, isOnline } = friend;
@@ -9,5 +10,14 @@ const FriendListItem = ({ friend }) => {
       <p className="name">{name}</p>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  friend: PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
 };
 export default FriendListItem;

@@ -1,14 +1,13 @@
 import React from 'react';
 
-const Statistics = ({ title, stats }) => (
-  <section class="statistics">
-    {title.length > 0 && <h2 class="title">{title.toUpperCase()}</h2>}
-
-    <ul class="stat-list">
+const Statistics = ({ title = '', stats }) => (
+  <section className="statistics">
+    {title.length > 0 && <h2 className="title">{title.toUpperCase()}</h2>}
+    <ul className="stat-list">
       {stats.map(({ id, label, percentage }) => (
-        <li class="item" key={id}>
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}%</span>
+        <li className="item" key={id}>
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}%</span>
         </li>
       ))}
     </ul>

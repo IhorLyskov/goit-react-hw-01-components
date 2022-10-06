@@ -9,7 +9,7 @@ import data from './statistics/data.json';
 import friends from './friendlist/friends.json';
 import transactions from './transactions/transactions.json';
 
-export const App = () => (
+const App = () => (
   <>
     <h1>1 - Профіль соціальної мережі</h1>
     <Profile
@@ -31,3 +31,5 @@ export const App = () => (
     <TransactionsHistory items={transactions} />
   </>
 );
+
+export default App;

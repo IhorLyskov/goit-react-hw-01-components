@@ -7,7 +7,7 @@ const Profile = ({
   avatar,
   stats: { followers, views, likes },
 }) => (
-  <div className="profile">
+  <section className="profile">
     <div className="description">
       <img src={avatar} alt="User avatar" className="avatar" />
       <p className="name">{username}</p>
@@ -29,7 +29,7 @@ const Profile = ({
         <span className="quantity">{likes}</span>
       </li>
     </ul>
-  </div>
+  </section>
 );
 
 export default Profile;

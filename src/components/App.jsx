@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from './section/Section.jsx';
 import Profile from './profile/Profile.jsx';
 import Statistics from './statistics/Statistics.jsx';
 import Friends from './friendlist/FriendList';
@@ -14,21 +15,28 @@ import { GlobalStyle } from './GlobalStyle/GlobalStyle.styled';
 const App = () => (
   <>
     <GlobalStyle />
-    <h1>1 - Профіль соціальної мережі</h1>
-    <Profile
-      username={user.username}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      stats={user.stats}
-    />
-    <h1>2 - Секція статистики</h1>
-    <Statistics title="Upload stats" stats={data} />
-    <Statistics stats={data} />
-    <h1>3 - Список друзів</h1>
-    <Friends friends={friends} />
-    <h1>4 - Історія транзакцій</h1>
-    <TransactionsHistory items={transactions} />
+    <Section title="1 - Профіль соціальної мережі">
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+    </Section>
+
+    <Section title="2 - Секція статистики">
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+    </Section>
+
+    <Section title="3 - Список друзів">
+      <Friends friends={friends} />
+    </Section>
+
+    <Section title="4 - Історія транзакцій">
+      <TransactionsHistory items={transactions} />
+    </Section>
   </>
 );
 

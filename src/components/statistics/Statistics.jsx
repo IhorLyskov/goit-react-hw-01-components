@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getRandomHexColor } from 'components/utils/getRandomHexColor';
 
 import {
-  StatisticsSection,
+  StatisticsDiv,
   Title,
   StatisticsList,
   StatisticItem,
@@ -12,7 +12,7 @@ import {
 } from './Statistics.styled';
 
 const Statistics = ({ title = '', stats }) => (
-  <StatisticsSection>
+  <StatisticsDiv>
     {title.length > 0 && <Title>{title.toUpperCase()}</Title>}
     <StatisticsList>
       {stats.map(({ id, label, percentage }) => (
@@ -25,7 +25,7 @@ const Statistics = ({ title = '', stats }) => (
         </StatisticItem>
       ))}
     </StatisticsList>
-  </StatisticsSection>
+  </StatisticsDiv>
 );
 
 Statistics.propTypes = {

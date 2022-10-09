@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  ProfileSection,
+  ProfileDiv,
   DescriptionDiv,
   Avatar,
   NameDiv,
@@ -20,7 +20,7 @@ const Profile = ({
   avatar,
   stats: { followers, views, likes },
 }) => (
-  <ProfileSection>
+  <ProfileDiv>
     <DescriptionDiv>
       <Avatar src={avatar} alt="User avatar" />
       <NameDiv>
@@ -44,7 +44,7 @@ const Profile = ({
         <Quantity>{likes}</Quantity>
       </li>
     </Stats>
-  </ProfileSection>
+  </ProfileDiv>
 );
 
 Profile.propTypes = {

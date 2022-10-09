@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StatisticsSection = styled.section`
+export const StatisticsDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
